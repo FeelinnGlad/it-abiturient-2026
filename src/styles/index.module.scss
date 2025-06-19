@@ -71,3 +71,18 @@
 		transform: rotate(360deg);
 	}
 }
+
+.tgBotBtn {
+	border-radius: 50%;
+	width: 65px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	aspect-ratio: 1/1;
+
+	svg {
+		padding: 10px;
+		fill: var(--color-text-title);
+		width: 50px;
+	}
+}

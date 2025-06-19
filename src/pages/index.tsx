@@ -13,6 +13,8 @@ import s from "@/styles/index.module.scss";
 import ExternalLinkIcon from "@/assets/icons/externalLink.icon";
 import LogoIcon from "@/assets/icons/logo.icon";
 import Link from "next/link";
+import TelegramLogoIcon from "@/assets/icons/telegramLogo.icon";
+import classNames from "classnames";
 
 export default function Index() {
 	return (
@@ -47,7 +49,17 @@ export default function Index() {
 							<p style={{color: "var(--color-text-hint-weak)", fontSize: "1.2em"}}>Гомельский
 								государственный университет<br/>имени Франциска Скорины</p>
 							<h1>ИТ-ОБРАЗОВАНИЕ</h1>
-							<Link data-role={"btn"} href={"/test"} style={{width: "fit-content"}}>Узнайте свою ИТ-специальность <ExternalLinkIcon strokeSize={15}/></Link>
+							<div style={{
+								display: "flex",
+								// alignItems: "center",
+								gap: 20
+							}}>
+								<Link data-role={"btn"} href={"/test"} style={{width: "fit-content"}}>Узнайте свою ИТ-специальность <ExternalLinkIcon strokeSize={15}/></Link>
+								<Link title={"Telegram Бот"} className={classNames("secondaryContainer", s.tgBotBtn)} href={"https://t.me/it_compendium_bot"}>
+									<TelegramLogoIcon/>
+								</Link>
+							</div>
+
 						</div>
 					</div>
 				</div>
