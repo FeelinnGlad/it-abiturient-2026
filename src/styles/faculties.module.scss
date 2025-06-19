@@ -1,0 +1,105 @@
+.facultyTitle {
+	display: flex;
+	gap: 40px;
+	width: 85%;
+	padding: 10px 60px;
+	align-items: center;
+	border-radius: 0 200px 200px 0;
+	margin-bottom: 30px;
+
+	&Image {
+		flex-shrink: 0;
+		height: 110px;
+	}
+
+	h2 {
+		font-size: 30px;
+	}
+}
+
+.facultyInfo {
+	padding: 0 70px;
+	line-height: 1.5em;
+
+	h3 {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+
+	p {
+		white-space: pre-wrap;       /* Since CSS 2.1 */
+		white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+		white-space: -o-pre-wrap;    /* Opera 7 */
+		word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	}
+}
+
+.projectLogo {
+	animation: logoAnimation infinite linear 90s;
+	overflow: visible;
+	stroke-width: 0.4px;
+	width: 80px;
+}
+
+@keyframes logoAnimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.universityPhoto {
+	position: relative;
+	overflow: hidden;
+
+	border-radius: 0 120px 0 0;
+	width: fit-content;
+	height: 300px;
+	min-height: 0;
+	min-width: 0;
+	flex-shrink: 0;
+
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		mix-blend-mode: color;
+		background-color: #967e5a;
+	}
+}
+
+.universityDesc {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	position: relative;
+
+	.universityDescLogoContainer {
+		//overflow: hidden;
+		inset: 0;
+		z-index: -1;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		//background-color: red;
+		//left: 30%;
+		//top: 30%;
+		position: absolute;
+	}
+
+	.universityDescLogo {
+		//overflow: hidden;
+		pointer-events: none;
+		height: 1000px;
+		aspect-ratio: 1/1;
+		transform: translateY(50px);
+	}
+
+	.universityDescLogoSmall {
+		height: 150px;
+		aspect-ratio: 1/1;
+		opacity: 0.8;
+	}
+}

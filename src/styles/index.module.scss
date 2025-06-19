@@ -1,0 +1,73 @@
+.facultyCard {
+	display: flex;
+	width: 100%;
+	aspect-ratio: 2 / 1.5;
+	flex-direction: column;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding: 30px 40px;
+
+	p {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: 1;
+		font-size: 1.1em;
+		color: var(--color-text-subtitle);
+		text-align: center;
+		margin-bottom: 40px;
+	}
+}
+
+.featureCard {
+	display: flex;
+	gap: 60px;
+	align-items: center;
+
+	&IconContainer {
+		position: relative;
+		height: fit-content;
+		&Icon {
+			animation: logoAnimation infinite linear 120s;
+			overflow: visible;
+			stroke-width: 0.4px;
+			fill: none;
+			width: 200px;
+
+		}
+
+		p {
+			user-select: none;
+			font-weight: 600;
+			//font-family: var(--font-family-title);
+			font-size: 50px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			inset: 0;
+			z-index: 10;
+			color: #2a2420;
+		}
+	}
+
+	&Text {
+		h2 {
+			margin-bottom: 16px;
+			font-size: 30px;
+		}
+
+		p {
+			line-height: 1.5em;
+		}
+	}
+}
+
+@keyframes logoAnimation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

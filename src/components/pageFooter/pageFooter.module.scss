@@ -1,0 +1,41 @@
+.footer {
+	box-shadow: 1px 0 0 var(--border-width) var(--color-divider);
+}
+
+.container {
+	* {
+		color: var(--color-text-hint-weak) !important;
+	}
+
+	padding-top: 100px;
+	padding-bottom: 60px;
+	display: flex;
+	gap: var(--indent-container);
+}
+
+.column {
+	flex: 1;
+
+	.title {
+		font-weight: 600;
+		//opacity: 0.8;
+		color: #908170 !important;
+		font-size: 1.2em;
+		margin-bottom: 12px;
+	}
+
+	.desc {
+		line-height: 1.5em;
+	}
+}
+
+.socialIcons {
+	display: flex;
+	gap: 12px;
+
+	svg {
+		fill: #908170 !important;
+		width: 30px;
+		height: 30px;
+	}
+}
