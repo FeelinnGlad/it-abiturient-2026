@@ -6,10 +6,11 @@ interface SendMessageParams {
 	chatId: number
 	text: string
 	reply_markup?: {
-		inline_keyboard: Array<{
+		inline_keyboard?: Array<Array<{
 			text: string
-			callback_data: string
-		}>
+			callback_data?: string
+			url?: string
+		}>>
 	}
 }
 
@@ -33,7 +34,7 @@ export default class Telegram {
 					"is_disabled": true
 				}),
 				"text": text,
-				"reply_markup": reply_markup
+				"reply_markup": JSON.stringify(reply_markup)
 			}
 		});
 	}
